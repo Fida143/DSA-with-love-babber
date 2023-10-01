@@ -427,24 +427,292 @@ int main()
     //                          * * *
     //                        * * * *
 
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+        int j = 1;
+        while (j <= n)
+        {
 
-      int n;
-    cin>>n;
-    int i=1;
-    while(i<=n){
-        int j=1;
-        while(j<=n){
-            
-            if(n-j+1<=i){
-            cout<<"*";
-            }else{
-                cout<<"@";
+            if (n - j + 1 <= i)
+            {
+                cout << "*";
             }
-            j=j+1;
+            else
+            {
+                cout << "@";
+            }
+            j = j + 1;
         }
-        cout<<endl;
-        i=i+1;
+        cout << endl;
+        i = i + 1;
     }
 
+    //  ************  OR   ****************
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+        int space = n - i;
+        while (space)
+        {
+            cout << " ";
+            space = space - 1;
+        }
+        int j = 1;
+        while (j <= i)
+        {
+            cout << "*";
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q17. Draw Pattern      * * * *
+    //                        * * *
+    //                        * *
+    //                        *
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+
+        int j = 1;
+        while (j <= n - i + 1)
+        {
+            cout << "*";
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q18. Draw Pattern      * * * *
+    //                          * * *
+    //                            * *
+    //                              *
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+
+        int space = i - 1;
+        while (space)
+        {
+            cout << " ";
+            space = space - 1;
+        }
+
+        int j = i;
+        while (j <= n)
+        {
+            cout << "*";
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q19. Draw Pattern      1 1 1 1
+    //                          2 2 2
+    //                            3 3
+    //                              4
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+
+        int space = i - 1;
+        while (space)
+        {
+            cout << " ";
+            space = space - 1;
+        }
+
+        int j = i;
+        while (j <= n)
+        {
+            cout << i;
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q20. Draw Pattern            1
+    //                            2 2
+    //                          3 3 3
+    //                        4 4 4 4
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+
+        int space = 1;
+        while (space <= n - i)
+        {
+            cout << " ";
+            space = space + 1;
+        }
+
+        int j = n - i + 1;
+        while (j <= n)
+        {
+            cout << i;
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q20. Draw Pattern            1 2 3 4
+    //                                2 3 4
+    //                                  3 4
+    //                                    4
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+
+        int space = 1;
+        while (space <= i - 1)
+        {
+            cout << " ";
+            space = space + 1;
+        }
+
+        int j = i;
+        while (j <= n)
+        {
+            cout << j;
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q21. Draw Pattern                  1
+    //                                  2 3
+    //                                4 5 6
+    //                             7 8 9 10
+
+    int n;
+    cin >> n;
+    int i = 1;
+    int count = 1;
+    while (i <= n)
+    {
+
+        int space = n - i;
+        while (space)
+        {
+            cout << " ";
+            space = space - 1;
+        }
+
+        int j = 1;
+        while (j <= i)
+        {
+            cout << count;
+            count = count + 1;
+            j = j + 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+
+    // **********************************************************************************************************************
+    // Q21. Draw Pattern                  1
+    //                                  1 2 1
+    //                                1 2 3 2 1
+    //                              1 2 3 4 3 2 1
+    //                            1 2 3 4 5 4 3 2 1
+
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+
+        int space = n - i;
+        while (space)
+        {
+            cout << " ";
+            space = space - 1;
+        }
+
+        int j = 1;
+        while (j <= i)
+        {
+            cout << j;
+            j = j + 1;
+        }
+
+        int k = i - 1;
+        while (k)
+        {
+            cout << k;
+            k = k - 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
+    // **********************************************************************************************************************
+    // Q21. Draw Pattern                  1 2 3 4 5 5 4 3 2 1
+    //                                    1 2 3 4 * * 4 3 2 1
+    //                                    1 2 3 * * * * 3 2 1
+    //                                    1 2 * * * * * * 2 1
+    //                                    1 * * * * * * * * 1
+
+    cin >> n;
+    int i = 1;
+    while (i <= n)
+    {
+        // 1st triangle
+        int j = 1;
+        while (j <= n - i + 1)
+        {
+            cout << j;
+            j = j + 1;
+        }
+        // 2nd triangle
+        int k = 2;
+        while (k < i + i)
+        {
+            cout << "*";
+            k = k + 1;
+        }
+
+        // 3rd triangle
+        int l = n - i + 1;
+        while (l)
+        {
+            cout << l;
+            l = l - 1;
+        }
+        cout << endl;
+        i = i + 1;
+    }
     return 0;
 }
