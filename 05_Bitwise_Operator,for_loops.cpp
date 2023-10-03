@@ -250,5 +250,7 @@ https: // leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-int
 
 https: // leetcode.com/problems/number-of-1-bits/description/
 
+    // kuch nahi hai
+
     return 0;
 }
